@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eleição</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="meuBody">
+  <div class="container">
+    <h1>Escolha seu voto</h1>
+
+
+
+    <main>
+      <section class="container-main">
+        <div class="nome-candidatos">
+          <p>1: Maria</p>
+        </div>
+        <div class="nome-candidatos">
+          <p>2: Ana</p>
+        </div>
+        <div class="nome-candidatos">
+          <p>3: Felipe</p>
+        </div>
+        <div class="nome-candidatos">
+          <p>4: Miguel</p>
+        </div>
+        <div class="nome-candidatos">
+          <p>5: Nulo: voto nulo ou branco</p>
+        </div>
+
+      </section>
+    </main>
+    <button onclick="escolherVoto()">Votar</button>
+    <p id="mensagem"></p>
+    <button onclick="mudarDeCor()">Mudar cor de fundo</button>
+  </div>
+
+
+  <script>
+    function escolherVoto() {
+      let candidatos = ['1: Maria', '2: Ana', '3: Felipe', '4: Miguel', '5: Nulo: voto nulo ou branco'];
+
+      let voto = prompt('Escolha seu voto: ' + candidatos.join(', '));
+
+      let mensagem;
+
+      switch (voto) {
+        case '1':
+          mensagem = 'Você votou na candidata: Maria';
+          break;
+        case '2':
+          mensagem = 'Você votou na candidata: Ana';
+          break;
+        case '3':
+          mensagem = 'Você votou no candidato: Felipe';
+          break;
+        case '4':
+          mensagem = 'Você votou no candidato: Miguel';
+          break;
+        case '5':
+          mensagem = 'Você votou nulo ou branco';
+          break;
+        default:
+          mensagem = 'Opção de voto inválida';
+      }
+
+      document.getElementById('mensagem').innerText = mensagem;
+    }
+    function mudarDeCor() {
+      let cores = ['1: red', '2: black', '3: green'];
+      console.log(`${cores}`);
+      let corEscolhida = prompt(` Escolha uma cor de fundo: ${cores}`);
+      console.log('corEscolhida');
+
+      let body = document.getElementById('meuBody');
+
+      switch (corEscolhida) {
+        case '1':
+          body.style.backgroundColor = 'red';
+          break;
+        case '2':
+          body.style.backgroundColor = 'black';
+          break;
+        case '3':
+          body.style.backgroundColor = 'green';
+          break;
+        default:
+          console.log('Opção de cor inválida');
+      }
+
+    }
+  </script>
+</body>
+
+</html>

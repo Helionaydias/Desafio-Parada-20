@@ -1,0 +1,58 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+.container {
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #2f4f4e;
+}
+.container-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+.nome-candidatos {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px 0;
+}
+.nome-candidatos p {
+  margin: 0;
+}
+h1 {
+  color: #fff;
+}
+button {
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+}
+
+#mensagem {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}
+.container-main {
+  display: block;
+}
+.nome-candidatos {
+  text-align: center;
+}
+p {
+  color: #fff;
+}
